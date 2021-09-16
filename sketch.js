@@ -9,13 +9,13 @@ function setup(){
 
     for(let y = 0; y <= height; y += step){
         for(let x = 0; x <= width; x += step){
-            // const size = random(0, 15);
-            let size;
-            if(random() < 0.95){
-                size = random(0, 10);
-            }else{
-                size = step;
-            }
+            const size = random(0, 15);
+
+            const r = random(255);
+            const g = random(r);
+            const b = random(g);
+            fill(r, g, b);
+
             ellipse(x, y, size, size);
         }
     }
